@@ -1,0 +1,114 @@
+.header {
+    
+    &__inner {
+        border: #ECB84C solid 2px;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        height: 100%;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 200px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        line-height: 277px;
+        margin: auto;
+    }
+
+    &__text {
+        font-size: 24px;
+        text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+        margin: 0 0 -13px 0;
+        text-align: center;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        &::after {
+            content: '';
+            height: 2px;
+            background-color: #ECB84C;
+            width: 100%;
+        }
+        &::before {
+            content: '';
+            background-color: #ECB84C;
+            height: 2px;
+            width: 100%;
+        }
+        &::before {
+            margin: 0 30px 0 0;
+        }
+        &::after {
+            margin: 0 0 0 30px;
+        }
+    }
+}
+.header-top {
+    background-image: url('../images/header/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 40px;
+    height: 100vh;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.header-body {
+    border-bottom: 1px solid #E8EAEC;
+    display: flex;
+    justify-content: center;
+}
+.menu {
+
+    &__icon {
+    }
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-family: "Lato";
+    }
+
+    &__item {
+        padding: 24px 10px 16px 10px;
+        margin: 0 0 0 12px;
+        border-bottom: 4px solid transparent; 
+        &:first-child {
+            margin: 0 0 0 0;
+        }
+        &.active {
+            border-bottom: 4px solid #ECB84C; 
+            .menu__link {
+                color: #4E5665;
+            }
+        }
+        &:hover {
+            border-bottom: 4px solid #ECB84C; 
+            .menu__link {
+                color: #4E5665;
+            }
+        }
+    }
+
+    &__link {
+        color: #909090;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+.burger-menu {
+}

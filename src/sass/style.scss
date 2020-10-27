@@ -1,0 +1,45 @@
+@import 'support';
+*,
+::before,
+::after {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$maxWidth: 1440px; // for adaptive fonts
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+$container: 1170px + 30px; // container with padding
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: $container;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+@import 'all';
+@import 'header';
+@import 'reasons';
+@import 'blog';
+@import 'photo';
+@import 'footer';
